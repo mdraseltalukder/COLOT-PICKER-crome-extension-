@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Inter:wght@400;500;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: gainsboro;
+      }
+
+      .popup {
+        width: 450px;
+        background: #fff;
+        border: 1px solid gainsboro;
+      }
+
+      .popup:where(.picker, header, .all-colors) {
+        display: flex;
+        align-items: center;
+      }
+
+      .picker {
+        padding: 30px 0;
+        background-color: #ffeeee;
+        text-align: center;
+      }
+      .picker #color-picker {
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background: rgb(235, 70, 20);
+        transition: 0.3s ease;
+      }
+
+      #color-picker:hover {
+        background: #f05353;
+      }
+
+      .picked-colors {
+        margin: 10px 15px;
+      }
+
+      .picked-colors header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .title {
+        font-size: 1rem;
+      }
+
+      .clear-all {
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: #f05353;
+      }
+      .clear-all:hover {
+        color: rgb(235, 70, 20);
+      }
+
+      .picked-colors.hide {
+        display: none;
+      }
+
+      .picked-colors .all-colors {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 20px 0;
+      }
+
+      .all-colors .color {
+        display: flex;
+        cursor: pointer;
+        margin-bottom: 10px;
+        width: calc(100% / 4);
+      }
+
+      .all-colors .rect {
+        height: 21px;
+        width: 21px;
+        display: block;
+        margin-right: 8px;
+        border-radius: 5px;
+        background-color: red;
+      }
+
+      .all-colors .color span {
+        font-size: 0.96rem;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    </style>
+    <div class="popup">
+      <div class="picker">
+        <button id="color-picker">Pick Color</button>
+      </div>
+      <div class="picked-colors">
+        <header>
+          <p class="title">Picked colors</p>
+          <span class="clear-all">Clear All</span>
+        </header>
+        <ul class="all-colors">
+          <!-- <li class="color">
+            <span class="rect"></span>
+            <span class="value hex">#fffff</span>
+          </li>
+          <li class="color">
+            <span class="rect"></span>
+            <span class="value hex">#fffff</span>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <!-- <script src="java.js"></script> -->
+    <script src="colorPicker.js"></script>
+  </body>
+</html>

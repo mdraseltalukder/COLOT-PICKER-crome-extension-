@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "cp",
+  "description": "comfort to copy paste in any website",
+  "version": "1.0",
+
+  "action": {
+    "default_icon": "img/Cafs-1024x683.jpg",
+    "default_popup": "index.html"
+  }
+}
